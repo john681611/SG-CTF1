@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', {name: 'Home'}); %>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <%- include('partials/nav', {home:true}); %>
+
+    <%- include('partials/header'); %>
+
+
+    <!-- Download Section -->
+    <section id="forum" class="content-section text-center">
+        <%- include('partials/sections/members'); %>
+    </section>
+
+    <section id="about" class="container content-section text-center">
+        <%- include('partials/sections/about'); %>
+    </section>
+
+    <section id="join" class="container content-section text-center">
+        <%- include('partials/sections/join'); %>
+    </section>
+    
+    <%- include('partials/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', {name: 'Forums'}); %>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <%- include('partials/nav', {home:false}); %>
+    <iframe src="http://forums.iron-fists.eu/index.php"></iframe>
+    <%- include('partials/footer'); %>
+</body>
+<script>document.getElementsByClassName("navbar-fixed-top")[0].classList.add("top-nav-collapse");</script>
+</html>

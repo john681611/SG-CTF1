@@ -1,0 +1,29 @@
+{
+  "name": "sg-ctf1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john681611/SG-CTF1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john681611/SG-CTF1/issues"
+  },
+  "homepage": "https://github.com/john681611/SG-CTF1#readme",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-minify-html": "^0.12.0",
+    "reload": "^2.2.2"
+  }
+}
