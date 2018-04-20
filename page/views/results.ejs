@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', {name: 'Members'}); %>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <%- include('partials/nav', {home:false}); %>
+            <!-- FLAG: -->
+            <!-- Download Section -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <section id="forum" class="content-section text-center">
+                <h1>Here's our range
+                </h1>
+                <% for(var i=0; i < guns.length; i++) { %>
+                  <span>
+                  <p><b>Name:</b> <%= guns[i].name %></p>
+                  <p><b>Description:</b>    <%= guns[i].model %></p>
+                  <p><b>Price:</b>    <%= guns[i].price %></p>
+                  <p><b>Weight:</b>    <%= guns[i].weight %></p>
+                  <p><b>Clip Size:</b>    <%= guns[i].clip %></p>
+                  <p><b>Ammo Capacity:</b>    <%= guns[i].ammo %></p>
+                  <p><b>Coolness factor:</b>    <%= guns[i].gun_nut_index %></p>
+                  <p><b>Destroys Undead:</b>    <%= guns[i].suitable_for_zombies %></p>
+                  <p><b>Obliterates Aliens:</b>    <%= guns[i].suitable_for_aliens %></p>
+                  <p><b>Staff Favourite:</b>    <%= guns[i].suggested %></p
+                  <% }  %>
+            </section>
+
+            <%- include('partials/footer'); %>
+</body>
+
+</html>

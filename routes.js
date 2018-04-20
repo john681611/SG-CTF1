@@ -1,7 +1,8 @@
 const express = require('express');
 const router = new express.Router();
 const users = require('./page/users.json');
-
+const guns = require('./page/guns.json');
+const DOMAIN = 'jh_awesome_ctf.herokuapp.com'
 
 router.get('/', function (req, res) {
     res.renderMin('index.ejs', {});
@@ -28,7 +29,7 @@ router.get('/member/:user', function (req, res) {
 router.post('/member', function (req, res) {
    if(req.body.admin && req.body.role !== 'Admin'){
     return res.send('FLAG:');
-   } 
+   }
    return res.renderMin('index.ejs', {});
 });
 
@@ -45,6 +46,15 @@ router.post('/login', function (req, res) {
     res.redirect('/');
 });
 
+router.post('/search', function (req, res) {
+  resulting_guns = guns
+    result = eval(req.body['super_safe_query']);
+console.log(result);
+    if (guns.find(gun=>gun.gun===result)) {
+      resulting_guns = result
+    }
+    res.renderMin('results.ejs', {guns: resulting_guns});
+});
 
 module.exports = {
     router

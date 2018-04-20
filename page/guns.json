@@ -1,0 +1,43 @@
+[
+    {
+        "name":"ZE W1D0WM4K3R!",
+        "model":"remmington 35mm with tripple barel on a double axis made from japanese folded blue german steel on a breath trigger",
+        "price":"12345",
+        "id": 0,
+        "weight": "N/A",
+        "clip": "2,15,20,200",
+        "ammo": "9mm, 10mm, 20mm .50BFG",
+        "gun_nut_index": "A",
+        "suitable_for_zombies": true,
+        "suitable_for_aliens": false,
+        "suggested": true
+    },
+
+    {
+      "name":"zorg industries flisubrnator",
+      "model":"gen 9 borgzorg with a modified fume extractor a double stock detection, tracing sights and a call mum module",
+      "price":"542321",
+      "id": 1,
+      "weight": "in gold",
+      "clip": "2,15,20,200,2000",
+      "ammo": "lasur catriges, gargleblaster greenades, your mum",
+      "gun_nut_index": "C",
+      "suitable_for_zombies": false,
+      "suitable_for_aliens": true,
+      "suggested": false
+    },
+
+    {
+      "name":"The silent killer",
+      "model":"N/A",
+      "price":"N/A",
+      "id": 2,
+      "weight": "ranges from 50 to 150kg",
+      "clip": "1, but deadly",
+      "ammo": "burgers, beans, brocoli, cheese, bread",
+      "gun_nut_index": "A+",
+      "suitable_for_zombies": false,
+      "suitable_for_aliens": true,
+      "suggested": false
+    }
+]
