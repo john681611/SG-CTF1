@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', {name: 'password Reset'}); %>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <%- include('partials/nav', {home:false}); %>
+            <!-- Download Section -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <section id="forum" class="content-section text-center">
+                <form action="/reset" method="POST">
+                    <input id="user" name="user" placeholder="username"><br>
+                    <!-- PRIVATE KEY: FLAG: -->
+                    <div class="g-recaptcha" data-sitekey="6LfQh1QUAAAAAEdH66YYbnIw6DAva_144QGgq144" style="margin: auto;width: 20%;"></div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <button class="btn btn-default btn-lg" type="submit">Save</button>
+                </form>           
+            </section>
+
+            <%- include('partials/footer'); %>
+</body>
+
+</html>

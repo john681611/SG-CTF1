@@ -8,22 +8,33 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <%- include('partials/nav', {home:false}); %>
-    <%= loginFlag %>
-    <!-- FLAG: -->
-    <!-- Download Section -->
-    <section id="forum" class="content-section text-center">
-        <%- include('partials/sections/members'); %>
-    </section>
+        <%= loginFlag %>
+            <!-- FLAG: -->
+            <!-- Download Section -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <section id="forum" class="content-section text-center">
+                <h1>Welcome
+                    <%= member.rank %>
+                        <%= member.name %>
+                </h1>
+                <h2>Update Card details</h2>
+                <label for="cardN">Card Number</label>
+                <br>
+                <input id="cardN" type="text" value="12345">
+                <br>
+                <label for="cardSc">Security code</label>
+                <br>
+                <input id="cardSc" type="password" value="FLAG:">
+                <br>
+                <button class="btn btn-default btn-lg" >Save</button>
+            </section>
 
-    <section id="about" class="container content-section text-center">
-        <%- include('partials/sections/about'); %>
-    </section>
-
-    <section id="join" class="container content-section text-center">
-        <%- include('partials/sections/join'); %>
-    </section>
-    
-    <%- include('partials/footer'); %>
+            <%- include('partials/footer'); %>
 </body>
 
 </html>

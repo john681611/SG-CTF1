@@ -7,10 +7,22 @@ router.get('/', function (req, res) {
     res.renderMin('index.ejs', {});
 });
 
+router.get('/forgot', function (req, res) {
+    res.renderMin('forgot.ejs', {});
+});
+
+router.post('/reset', function (req, res) {
+    if(req.body['g-recaptcha-response'] != '' && req.body.user){
+        return res.renderMin('reset.ejs', {name:req.body.user});
+    }
+    res.redirect('/forgot');
+});
+
+
 router.get('/member/:user', function (req, res) {
-    console.log(req.query);
     const loginFlag = req.query.logged? "FLAG:":"";
-    res.renderMin('member.ejs', {loginFlag: loginFlag});
+    const member = users.find(user => user.user === req.params.user)
+    res.renderMin('member.ejs', {loginFlag: loginFlag, member: member});
 });
 
 router.post('/member', function (req, res) {
