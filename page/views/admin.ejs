@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', {name: 'Admin'}); %>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <%- include('partials/nav', {home:false}); %>
+    FLAG:
+
+
+    <!-- Download Section -->
+    <section id="forum" class="content-section text-center">
+        <%- include('partials/sections/editing/roster',{members: members}); %>
+        <p>note users can be changed manually on server in users.json</p>
+    </section>
+    <%- include('partials/footer'); %>
+</body>
+
+</html>

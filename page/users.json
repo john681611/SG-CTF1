@@ -1,0 +1,41 @@
+[
+    {
+        "user":"admin",
+        "password":"password",
+        "hiddenFLAG:":"",
+        "id": 0,
+        "rank": "Gen",
+        "name": "David",
+        "pos": "HOE",
+        "squad": "A",
+        "role": "Admin",
+        "joined": 2018,
+        "admin": true
+    },
+
+    {
+        "user":"BJ",
+        "password":"BJIsAwsome",
+        "id": 0,
+        "rank": "SGT",
+        "name": "Big J",
+        "pos": "FESK LEAD",
+        "squad": "A",
+        "role": "Hiding",
+        "joined": 1920,
+        "admin": false
+    },
+
+    {
+        "user":"LJ",
+        "password":"LJIsAwsome",
+        "id": 0,
+        "rank": "PVT",
+        "name": "Lil J",
+        "pos": "Minion",
+        "squad": "B",
+        "role": "Chaos Monkey",
+        "joined": 1999,
+        "admin": false
+    }
+]
