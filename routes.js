@@ -47,13 +47,17 @@ router.post('/login', function (req, res) {
 });
 
 router.post('/search', function (req, res) {
-  resulting_guns = guns
-    result = eval(req.body['super_safe_query']);
-console.log(result);
-    if (guns.find(gun=>gun.gun===result)) {
-      resulting_guns = result
+    let resulting_guns = guns;
+    let result;
+    try{
+        result = eval(req.body.search);
+    } catch (e) {
+        result = req.body.search
     }
-    res.renderMin('results.ejs', {guns: resulting_guns});
+    let search = guns.filter(gun=>{ return JSON.stringify(gun).includes(result)});
+    res.renderMin('results.ejs', {term: result, guns: search});
+
+    
 });
 
 module.exports = {

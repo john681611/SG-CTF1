@@ -6,7 +6,7 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+   
     <%- include('partials/nav', {home:false}); %>
             <!-- FLAG: -->
             <!-- Download Section -->
@@ -16,11 +16,15 @@
             <br>
             <br>
             <br>
-            <section id="forum" class="content-section text-center">
-                <h1>Here's our range
-                </h1>
+            <section id="forum" class="content-section text-center">  
+                <h1>Searched for <%= term %></h1>
+                <% if(!guns.length){ %>
+                    <h2>Nada found</h2>
+                    <% } else{ %>
+                <h2>Here's our results
+                </h2>
                 <% for(var i=0; i < guns.length; i++) { %>
-                  <span>
+                <hr>
                   <p><b>Name:</b> <%= guns[i].name %></p>
                   <p><b>Description:</b>    <%= guns[i].model %></p>
                   <p><b>Price:</b>    <%= guns[i].price %></p>
@@ -30,8 +34,12 @@
                   <p><b>Coolness factor:</b>    <%= guns[i].gun_nut_index %></p>
                   <p><b>Destroys Undead:</b>    <%= guns[i].suitable_for_zombies %></p>
                   <p><b>Obliterates Aliens:</b>    <%= guns[i].suitable_for_aliens %></p>
-                  <p><b>Staff Favourite:</b>    <%= guns[i].suggested %></p
-                  <% }  %>
+                  <p><b>Staff Favourite:</b>    <%= guns[i].suggested %></p>
+                  <hr>
+                  <% }} %>
+            </section>
+            <section id="gear" class="container content-section text-center">
+                    <%- include('partials/sections/gear'); %>
             </section>
 
             <%- include('partials/footer'); %>
