@@ -1,5 +1,11 @@
 # SG-CTF1
 
+## Installation and Run
+you need node installed
+`npm intall`
+`node server.js`
+
+
 # Resolving security issues challenge
 This challenge is a little different to the previous challenge using this app.
 Here we are going to fix the security issues. 
